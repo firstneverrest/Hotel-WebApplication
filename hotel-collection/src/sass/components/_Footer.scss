@@ -1,0 +1,10 @@
+.Footer {
+    height: 3rem;
+    margin-bottom: 3rem;
+    position: relative;
+    text-align: center;
+
+    &__text {
+       @include absCenter;
+    }
+}
