@@ -1,65 +1,37 @@
 import React, { useState, useEffect } from "react";
 
 import "./sass/main.scss";
-import Footer from "./components/Footer";
-import Questions from "./components/Questions";
-import data from "./data";
-import firebase from "./utils/InitialFirebase";
+// import Error from "./components/Error";
+import Sidebar from "./components/Sidebar";
+import Home from "./components/Home";
+// import axios from "axios";
 
 function App() {
-  const [questions, setQuestions] = useState([]);
-  const [keepQuestions, setKeepQuestions] = useState([]);
+  // const [hotels, setHotels] = useState([]);
 
-  useEffect(() => {
-    // addQuestionAnswer();
-    readQuestionAnswer();
-  }, []);
+  // useEffect(() => {
+  //   getRequest();
+  // }, []);
 
-  // fetch question and answer from firebase realtime database
-  // const fetchQA = async () => {
-  //   try {
-  //     // const response = await fetch(url)
-  //   }
+  // const getRequest = () => {
+  //   axios.get('https://my-first-hosting-97075-default-rtdb.firebaseio.com/Activity.json')
+  //   .then(function (response) {
+  //     console.log(response.data);
+  //   })
+  //   .catch(function (error) {
+  //     console.log(error);
+  //   })
+
   // };
 
-  const addQuestionAnswer = () => {
-    const ref = firebase.database().ref("Activity");
-    const questionAnswer = {
-      question: "What is your favorite sport",
-      answer: "Gun Shooting is my favorite sport",
-    };
-
-    ref.push(questionAnswer);
-  };
-
-  const readQuestionAnswer = () => {
-    const ref = firebase.database().ref("Activity");
-    ref.on("value", (snapshot) => {
-      const data = snapshot.val();
-      const dataList = [];
-      for (let id in data) {
-        dataList.push({ id, ...data[id] });
-      }
-      setKeepQuestions(dataList);
-      setQuestions(dataList);
-    });
-  };
-
-  const filterQuestions = (category) => {
-    if (category === "all") {
-      setQuestions(keepQuestions);
-      return;
-    }
-
-    const newQuestions = keepQuestions.filter(
-      (question) => question.category === category
-    );
-    setQuestions(newQuestions);
-  };
   return (
     <div className="App">
-      <Questions questions={questions} filterQuestions={filterQuestions} />
-      <Footer />
+      <div className="container-left">
+        <Sidebar />
+      </div>
+      <div className="container-right">
+        <Home />
+      </div>
     </div>
   );
 }

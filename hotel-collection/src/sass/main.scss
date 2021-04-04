@@ -2,10 +2,12 @@
 @import "./base";
 @import "./typography";
 @import "./mixins";
+@import "./utilities";
 
+@import "./components/App";
+@import "./components/Home";
+@import "./components/Sidebar";
 @import "./components/Footer";
-@import "./components/Question";
-@import "./components/Questions";
 @import "./components/Error";
+@import "./components/bg-video";
 @import "./components/Loader";
-@import "./components/Navbar";

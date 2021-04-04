@@ -1,10 +1,20 @@
-$color-primary: #40E0D0; 
-$color-secondary: #f6efa6;
+// color
+$color-primary: #FEE440; 
+// $color-secondary: #f6efa6;
 
 $color-white: #fff;
-$color-black: #08070B;
+$color-black: #000;
 
+// responsive device screen size
 $bp-smallest: 21.875em; // 350px
 $bp-small: 31.25em; // 500px
 $bp-medium: 50em; // 800px
 $bp-large: 75em; // 1200px
+
+// font
+$font-header: Georgia, 'Times New Roman', Times, serif;
+
+// margin
+$margin-small: 2.5rem;
+$margin-medium: 5rem;
+$margin-large: 8rem;

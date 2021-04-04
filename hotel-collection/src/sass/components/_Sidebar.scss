@@ -1,0 +1,61 @@
+.Sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  position: sticky;
+  top: 0;
+  background-color: $color-primary;
+  padding: 4rem 8rem 4rem 4rem;
+  height: 100vh;
+  font-size: 1.5rem;
+
+  & a {
+    text-decoration: none;
+    color: $color-black;
+  }
+
+  &__nav {
+    display: flex;
+    flex-direction: column;
+
+    & a:not(:last-child) {
+      margin-bottom: $margin-small;
+    }
+  }
+
+  &-logo {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: $margin-medium !important;
+  }
+
+  &-home {
+  }
+
+  &-explore {
+  }
+
+  &-favorite {
+  }
+
+  &-author {
+  }
+
+  &-contact {
+  }
+
+  &__social {
+    display: flex;
+    justify-content: space-between;
+
+    &-ig {
+    }
+
+    &-tweeter {
+    }
+
+    &-facebook {
+    }
+  }
+}
