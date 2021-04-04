@@ -10,17 +10,18 @@
   height: 100vh;
   font-size: 1.5rem;
 
-  & a {
-    text-decoration: none;
-    color: $color-black;
-  }
-
   &__nav {
     display: flex;
     flex-direction: column;
 
     & a:not(:last-child) {
       margin-bottom: $margin-small;
+    }
+
+    & li {
+      list-style-type: none;
+      text-decoration: none;
+      color: $color-black;
     }
   }
 
@@ -48,6 +49,7 @@
   &__social {
     display: flex;
     justify-content: space-between;
+    font-size: 1.7rem;
 
     &-ig {
     }

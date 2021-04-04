@@ -1,25 +1,52 @@
-import React from 'react'
+import React from "react";
+
+import App from "../App";
+import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Sidebar = () => {
-    return (
-        <div className="Sidebar">
-            <div className="Sidebar__nav">
-                <a className="Sidebar-logo" href="#">Neverrest</a>
-                <a className="Sidebar-home" href="#">HOME</a>
-                <a className="Sidebar-explore" href="#">EXPLORE</a>
-                <a className="Sidebar-favorite" href="#">FAVORITE</a>
-                <a className="Sidebar-author" href="#">AUTHOR</a>
-                <a className="Sidebar-contact" href="#">CONTACT</a>
-            </div>
-            
-            <div className="Sidebar__social">
-                <a className="Sidebar__social-ig" href="#">IG</a>
-                <a className="Sidebar__social-tweeter" href="#">TW</a>
-                <a className="Sidebar__social-facebook" href="#">FA</a>
-            </div>
+  const navStyle = {
+    textDecoration: "none",
+    listStyleType: "none",
+    color: "#000",
+  };
 
-        </div>
-    )
-}
+  return (
+    <div className="Sidebar">
+      <ul className="Sidebar__nav">
+        <Link to="/" style={navStyle}>
+          <li className="Sidebar-logo">Neverrest</li>
+        </Link>
+        <Link to="/" style={navStyle}>
+          <li className="Sidebar-home">HOME</li>
+        </Link>
+        <Link to="/explore" style={navStyle}>
+          <li className="Sidebar-explore">EXPLORE</li>
+        </Link>
+        <Link to="/favorite" style={navStyle}>
+          <li className="Sidebar-favorite">FAVORITE</li>
+        </Link>
+        <Link to="/author" style={navStyle}>
+          <li className="Sidebar-author">AUTHOR</li>
+        </Link>
+        <Link to="/contact" style={navStyle}>
+          <li className="Sidebar-contact">CONTACT</li>
+        </Link>
+      </ul>
 
-export default Sidebar
+      <div className="Sidebar__social">
+        <a className="Sidebar__social-ig" href="#">
+          <FaFacebookF />
+        </a>
+        <a className="Sidebar__social-tweeter" href="#">
+          <FaTwitter />
+        </a>
+        <a className="Sidebar__social-facebook" href="#">
+          <FaInstagram />
+        </a>
+      </div>
+    </div>
+  );
+};
+
+export default Sidebar;

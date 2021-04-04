@@ -1,10 +1,15 @@
-import React, { useState, useEffect } from "react";
+// import React, { useState, useEffect } from "react";
 
 import "./sass/main.scss";
 // import Error from "./components/Error";
 import Sidebar from "./components/Sidebar";
 import Home from "./components/Home";
+import Favorite from "./components/Favorite";
+import Explore from "./components/Explore/Explore";
+import Author from "./components/Author";
+import Contact from "./components/Contact";
 // import axios from "axios";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 function App() {
   // const [hotels, setHotels] = useState([]);
@@ -26,12 +31,20 @@ function App() {
 
   return (
     <div className="App">
+      <Router >
       <div className="container-left">
         <Sidebar />
       </div>
-      <div className="container-right">
-        <Home />
-      </div>
+        <div className="container-right">
+          <Switch>
+            <Route path="/" exact component={Home} />
+            <Route path="/explore" component={Explore} />
+            <Route path="/favorite" component={Favorite} />
+            <Route path="/author" component={Author} />
+            <Route path="/contact" component={Contact} />
+          </Switch>
+        </div>
+      </Router>
     </div>
   );
 }
