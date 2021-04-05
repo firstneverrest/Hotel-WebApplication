@@ -51,13 +51,9 @@
     justify-content: space-between;
     font-size: 1.7rem;
 
-    &-ig {
+    & > * {
+      color: $color-black;
     }
-
-    &-tweeter {
-    }
-
-    &-facebook {
-    }
+    
   }
 }
