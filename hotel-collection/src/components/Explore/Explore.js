@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 import hotel1 from "../../img/img-hotel-1.jpg";
 import { IoSearch } from "react-icons/io5";
+import Hotels from './Hotels'
 
 const Explore = () => {
   const [search, setSearch] = useState("");
@@ -48,6 +49,7 @@ const Explore = () => {
         />
         <button className="explore__search-btn"><IoSearch /></button>
       </div>
+      <Hotels /> 
     </div>
   );
 };

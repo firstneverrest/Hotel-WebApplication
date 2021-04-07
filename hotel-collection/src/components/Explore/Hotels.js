@@ -1,9 +1,16 @@
 import React from 'react'
 
+import Hotel from './Hotel'
+
 const Hotels = () => {
     return (
-        <div>
-            This is Hotels component
+        <div className="Hotels">
+           <Hotel /> 
+           <Hotel /> 
+           <Hotel /> 
+           <Hotel /> 
+           <Hotel /> 
+           <Hotel /> 
         </div>
     )
 }
