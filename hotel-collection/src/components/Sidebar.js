@@ -26,8 +26,8 @@ const Sidebar = () => {
         <Link to="/favorite" style={navStyle}>
           <li className="Sidebar-favorite">FAVORITE</li>
         </Link>
-        <Link to="/author" style={navStyle}>
-          <li className="Sidebar-author">AUTHOR</li>
+        <Link to="/about" style={navStyle}>
+          <li className="Sidebar-author">ABOUT</li>
         </Link>
         <Link to="/contact" style={navStyle}>
           <li className="Sidebar-contact">CONTACT</li>

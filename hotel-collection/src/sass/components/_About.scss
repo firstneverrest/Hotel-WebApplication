@@ -1,0 +1,17 @@
+.About {
+  height: 100vh;
+  width: 80rem;
+  margin: 7rem auto;
+
+  &__header {
+    margin-bottom: 1rem;
+    font-size: 4rem;
+    color: $color-primary;
+  }
+
+  &__text {
+      text-align: start;
+      text-indent: 5rem;
+      line-height: 1.7;
+  }
+}

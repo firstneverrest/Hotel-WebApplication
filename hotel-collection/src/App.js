@@ -6,7 +6,7 @@ import Sidebar from "./components/Sidebar";
 import Home from "./components/Home";
 import Favorite from "./components/Favorite";
 import Explore from "./components/Explore/Explore";
-import Author from "./components/Author";
+import About from "./components/About";
 import Contact from "./components/Contact";
 // import axios from "axios";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
@@ -40,7 +40,7 @@ function App() {
             <Route path="/" exact component={Home} />
             <Route path="/explore" component={Explore} />
             <Route path="/favorite" component={Favorite} />
-            <Route path="/author" component={Author} />
+            <Route path="/about" component={About} />
             <Route path="/contact" component={Contact} />
           </Switch>
         </div>
