@@ -2,7 +2,8 @@ import React from "react";
 
 const About = () => {
   return (
-    <div className="About">
+    <React.Fragment>
+    <div className="About"></div>
       <h3 className="About__header">About</h3>
       <p className="About__text">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam,
@@ -12,7 +13,7 @@ const About = () => {
         facilis aut voluptate. Possimus voluptates quae quia molestiae aperiam
         blanditiis deserunt provident?
       </p>
-    </div>
+    </React.Fragment>
   );
 };
 
