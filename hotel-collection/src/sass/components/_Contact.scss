@@ -1,0 +1,29 @@
+.Contact {
+    &-container {
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      width: 100%;
+      align-items: center;
+      padding-top: 3rem;
+    }
+  
+    &__header {
+      text-align: center;
+      margin: 5rem 0 1rem 0;
+      font-size: 4rem;
+      color: $color-primary;
+    }
+  
+    &__text {
+      text-align: start;
+      text-indent: 5rem;
+      line-height: 1.7;
+      width: 80rem;
+    }
+  
+    &__background {
+       @include bgClipPath("../img/img-hotel-2.jpg");
+    }
+  }
+  

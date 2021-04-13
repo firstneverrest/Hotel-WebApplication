@@ -1,4 +1,4 @@
-.About {
+.Favorite {
 
   &-container {
     display: flex;
@@ -24,7 +24,7 @@
   }
 
   &__background {
-     @include bgClipPath("../img/img-hotel-6.jpg");
+     @include bgClipPath("../img/img-hotel-4.jpg");
 
   }
 }

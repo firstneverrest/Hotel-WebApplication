@@ -13,6 +13,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 function App() {
   // const [hotels, setHotels] = useState([]);
+  // const []
 
   // useEffect(() => {
   //   getRequest();
@@ -31,19 +32,15 @@ function App() {
 
   return (
     <div className="App">
-      <Router >
-      <div className="container-left">
+      <Router>
         <Sidebar />
-      </div>
-        <div className="container-right">
-          <Switch>
-            <Route path="/" exact component={Home} />
-            <Route path="/explore" component={Explore} />
-            <Route path="/favorite" component={Favorite} />
-            <Route path="/about" component={About} />
-            <Route path="/contact" component={Contact} />
-          </Switch>
-        </div>
+        <Switch>
+          <Route path="/" exact component={Home} />
+          <Route path="/explore" component={Explore} />
+          <Route path="/favorite" component={Favorite} />
+          <Route path="/about" component={About} />
+          <Route path="/contact" component={Contact} />
+        </Switch>
       </Router>
     </div>
   );

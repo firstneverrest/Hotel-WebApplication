@@ -2,17 +2,3 @@
   display: flex;
   overflow-x: hidden;
 }
-
-.container {
-  &-left {
-    min-height: 100vh; 
-  }
-
-  &-right {
-    display: flex;
-    flex-direction: column;
-
-    width: 90vw;
-    text-align: center;
-  }
-}
