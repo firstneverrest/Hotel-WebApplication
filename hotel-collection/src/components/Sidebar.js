@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 import App from "../App";
 import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const Sidebar = () => {
+  const [ClickedPage, setClickedPage] = useState("home");
+
   const navStyle = {
     textDecoration: "none",
     listStyleType: "none",
@@ -17,20 +19,46 @@ const Sidebar = () => {
         <Link to="/" style={navStyle}>
           <li className="Sidebar-logo">Neverrest</li>
         </Link>
+
         <Link to="/" style={navStyle}>
-          <li className="Sidebar-home">HOME</li>
+          <li
+            className={`Sidebar-home ${ClickedPage === "home" && "active"}`}
+            onClick={() => setClickedPage("home")}
+          >
+            HOME
+          </li>
         </Link>
         <Link to="/explore" style={navStyle}>
-          <li className="Sidebar-explore">EXPLORE</li>
+          <li
+            className={`Sidebar-explore ${ClickedPage === "explore" && "active"}`}
+            onClick={() => setClickedPage("explore")}
+          >
+            EXPLORE
+          </li>
         </Link>
         <Link to="/favorite" style={navStyle}>
-          <li className="Sidebar-favorite">FAVORITE</li>
+          <li 
+          className={`Sidebar-favorite ${ClickedPage === "favorite" && "active"}`}
+          onClick={() => setClickedPage("favorite")}
+          >
+            FAVORITE
+          </li>
         </Link>
         <Link to="/about" style={navStyle}>
-          <li className="Sidebar-author">ABOUT</li>
+          <li 
+          className={`Sidebar-about ${ClickedPage === "about" && "active"}`}
+          onClick={() => setClickedPage("about")}
+          >
+            ABOUT
+           </li>
         </Link>
         <Link to="/contact" style={navStyle}>
-          <li className="Sidebar-contact">CONTACT</li>
+          <li 
+          className={`Sidebar-contact ${ClickedPage === "contact" && "active"}`}
+          onClick={() => setClickedPage("contact")}
+          >
+            CONTACT
+          </li>
         </Link>
       </ul>
 
