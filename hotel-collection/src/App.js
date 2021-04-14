@@ -1,4 +1,5 @@
-// import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 import "./sass/main.scss";
 // import Error from "./components/Error";
@@ -8,12 +9,18 @@ import Favorite from "./components/Favorite";
 import Explore from "./components/Explore/Explore";
 import About from "./components/About";
 import Contact from "./components/Contact";
+import Loader from "./components/Loader";
 // import axios from "axios";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 function App() {
   // const [hotels, setHotels] = useState([]);
-  // const []
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setInterval(() => {
+      setLoading(false);
+    }, 2000);
+  }, []);
 
   // useEffect(() => {
   //   getRequest();
@@ -29,6 +36,10 @@ function App() {
   //   })
 
   // };
+
+  if (loading) {
+    return <Loader />;
+  }
 
   return (
     <div className="App">

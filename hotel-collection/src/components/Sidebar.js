@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 
-import App from "../App";
 import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
 import { Link } from "react-router-dom";
 

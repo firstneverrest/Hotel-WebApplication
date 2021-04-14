@@ -1,19 +1,19 @@
 @import "./variables";
 @import "./base";
-@import "./typography";
 @import "./mixins";
+@import "./typography";
 @import "./utilities";
 
+@import "./components/About";
 @import "./components/App";
-@import "./components/Home";
-@import "./components/Sidebar";
-@import "./components/Footer";
+@import "./components/Loader";
+@import "./components/bg-video";
+@import "./components/Contact";
 @import "./components/Error";
 @import "./components/Explore";
-@import "./components/About";
-@import "./components/Contact";
 @import "./components/Favorite";
-@import "./components/bg-video";
+@import "./components/Footer";
+@import "./components/Home";
 @import "./components/Hotel";
 @import "./components/Hotels";
-@import "./components/Loader";
+@import "./components/Sidebar";
