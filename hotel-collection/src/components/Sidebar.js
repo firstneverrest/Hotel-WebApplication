@@ -14,52 +14,61 @@ const Sidebar = () => {
 
   return (
     <div className="Sidebar">
-      <ul className="Sidebar__nav">
-        <Link to="/" style={navStyle}>
-          <li className="Sidebar-logo">Neverrest</li>
-        </Link>
-
-        <Link to="/" style={navStyle}>
-          <li
-            className={`Sidebar-home ${ClickedPage === "home" && "active"}`}
-            onClick={() => setClickedPage("home")}
-          >
-            HOME
-          </li>
-        </Link>
-        <Link to="/explore" style={navStyle}>
-          <li
-            className={`Sidebar-explore ${ClickedPage === "explore" && "active"}`}
-            onClick={() => setClickedPage("explore")}
-          >
-            EXPLORE
-          </li>
-        </Link>
-        <Link to="/favorite" style={navStyle}>
-          <li 
-          className={`Sidebar-favorite ${ClickedPage === "favorite" && "active"}`}
-          onClick={() => setClickedPage("favorite")}
-          >
-            FAVORITE
-          </li>
-        </Link>
-        <Link to="/about" style={navStyle}>
-          <li 
-          className={`Sidebar-about ${ClickedPage === "about" && "active"}`}
-          onClick={() => setClickedPage("about")}
-          >
-            ABOUT
-           </li>
-        </Link>
-        <Link to="/contact" style={navStyle}>
-          <li 
-          className={`Sidebar-contact ${ClickedPage === "contact" && "active"}`}
-          onClick={() => setClickedPage("contact")}
-          >
-            CONTACT
-          </li>
-        </Link>
-      </ul>
+      <div className="container">
+        <h3 className="Sidebar-logo">
+          <Link to="/" style={navStyle}>
+            Neverrest
+          </Link>
+        </h3>
+        <ul className="Sidebar__nav">
+          <Link to="/" style={navStyle}>
+            <li
+              className={`Sidebar-home ${ClickedPage === "home" && "active"}`}
+              onClick={() => setClickedPage("home")}
+            >
+              <p>HOME</p>
+            </li>
+          </Link>
+          <Link to="/explore" style={navStyle}>
+            <li
+              className={`Sidebar-explore ${
+                ClickedPage === "explore" && "active"
+              }`}
+              onClick={() => setClickedPage("explore")}
+            >
+              EXPLORE
+            </li>
+          </Link>
+          <Link to="/favorite" style={navStyle}>
+            <li
+              className={`Sidebar-favorite ${
+                ClickedPage === "favorite" && "active"
+              }`}
+              onClick={() => setClickedPage("favorite")}
+            >
+              FAVORITE
+            </li>
+          </Link>
+          <Link to="/about" style={navStyle}>
+            <li
+              className={`Sidebar-about ${ClickedPage === "about" && "active"}`}
+              onClick={() => setClickedPage("about")}
+            >
+              ABOUT
+            </li>
+          </Link>
+          <Link to="/contact" style={navStyle}>
+            <li
+              className={`Sidebar-contact ${
+                ClickedPage === "contact" && "active"
+              }`}
+              onClick={() => setClickedPage("contact")}
+            >
+              CONTACT
+            </li>
+          </Link>
+        </ul>
+      </div>
 
       <div className="Sidebar__social">
         <a className="Sidebar__social-ig" href="#">
