@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 
 import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
+import { AiFillHome, AiFillCompass, AiFillHeart, AiFillInfoCircle, AiFillContacts } from "react-icons/ai";
+import { RiContactsBook2Fill } from 'react-icons/ri'
 import { Link } from "react-router-dom";
 
 const Sidebar = () => {
@@ -26,7 +28,8 @@ const Sidebar = () => {
               className={`Sidebar-home ${ClickedPage === "home" && "active"}`}
               onClick={() => setClickedPage("home")}
             >
-              <p>HOME</p>
+              <AiFillHome className="Sidebar__nav-icon" />
+              HOME
             </li>
           </Link>
           <Link to="/explore" style={navStyle}>
@@ -36,6 +39,7 @@ const Sidebar = () => {
               }`}
               onClick={() => setClickedPage("explore")}
             >
+              <AiFillCompass className="Sidebar__nav-icon" /> 
               EXPLORE
             </li>
           </Link>
@@ -46,6 +50,7 @@ const Sidebar = () => {
               }`}
               onClick={() => setClickedPage("favorite")}
             >
+              <AiFillHeart className="Sidebar__nav-icon" />
               FAVORITE
             </li>
           </Link>
@@ -54,6 +59,7 @@ const Sidebar = () => {
               className={`Sidebar-about ${ClickedPage === "about" && "active"}`}
               onClick={() => setClickedPage("about")}
             >
+              <AiFillInfoCircle className="Sidebar__nav-icon" />
               ABOUT
             </li>
           </Link>
@@ -64,6 +70,7 @@ const Sidebar = () => {
               }`}
               onClick={() => setClickedPage("contact")}
             >
+              <RiContactsBook2Fill className="Sidebar__nav-icon" />
               CONTACT
             </li>
           </Link>

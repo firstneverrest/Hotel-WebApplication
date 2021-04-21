@@ -11,8 +11,10 @@
   &__nav {
     display: flex;
     flex-direction: column;
-
+    
     & li:first-of-type {
+      display: flex;
+      align-items: center;
       list-style-type: none;
       text-decoration: none;
       padding: 2rem 3rem;
@@ -22,6 +24,10 @@
         background-color: $color-gray;
         color: $color-white;
       }
+    }
+
+    &-icon {
+      margin-right: 1rem;
     }
   }
 
