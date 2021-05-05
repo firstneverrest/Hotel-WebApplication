@@ -3,4 +3,8 @@
   bottom: 4%;
   left: 50%;
   transform: translate(-50%, -50%);
+
+  @media only screen and (max-width: $bp-medium) {
+    font-size: 1.3rem;
+  }
 }

@@ -9,7 +9,7 @@ const Hotel = () => {
   return (
     <div className="Hotel">
       <div className="container">
-        <img className="Hotel__image" src={hotelImg} alt="hotel image" />
+        <img className="Hotel__image" src={hotelImg} alt="beach hotel" />
       </div>
       <div className="Hotel__content">
         <div className="Hotel__content-title">Hotel Name</div>

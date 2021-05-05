@@ -2,11 +2,31 @@
   padding: 25rem;
   height: 100vh;
   position: relative;
-  text-align: center;
-
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
   &__header {
     font-size: 5rem;
     margin-bottom: $margin-small;
+
+    @media only screen and (max-width: $bp-large) {
+      font-size: 4rem;
+    }
+    @media only screen and (max-width: 980px) {
+      font-size: 3rem;
+    }
+  }
+
+  @media only screen and (max-width: 980px) {
+    padding: 18rem;
+  }
+  @media only screen and (max-width: $bp-medium) {
+    padding: 15rem;
+  }
+  @media only screen and (max-width: 600px) {
+    padding: 10rem;
   }
 
   &__subtitle {

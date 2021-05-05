@@ -13,16 +13,24 @@
   transform: translate(-50%, -50%);
 }
 
-@mixin bgClipPath($img: "../img/img-hotel-6.jpg") {
+@mixin bgImg {
   width: 100%;
-  height: 65rem;
-  background-image: linear-gradient(
-      to right bottom,
-      rgba(#fff, 0.7),
-      rgba(#000, 0.7)
-    ),
-    url($img);
-  background-size: cover;
-  background-position: bottom;
-  clip-path: polygon(50% 25%, 100% 0, 100% 100%, 0 100%, 0 0);
+  height: 100%;
+  object-fit: cover;
+  margin-top: 3rem;
+  opacity: .4;
 }
+
+// @mixin bgClipPath($img: "../img/img-hotel-6.jpg") {
+//   width: 100%;
+//   height: 65rem;
+//   background-image: linear-gradient(
+//       to right bottom,
+//       rgba(#fff, 0.7),
+//       rgba(#000, 0.7)
+//     ),
+//     url($img);
+//   background-size: cover;
+//   background-position: bottom;
+//   clip-path: polygon(50% 25%, 100% 0, 100% 100%, 0 100%, 0 0);
+// }

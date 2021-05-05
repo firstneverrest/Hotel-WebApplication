@@ -1,4 +1,5 @@
 import React from "react";
+import HotelImg from "../img/img-hotel-2.jpg";
 
 const Favorite = () => {
   return (
@@ -14,8 +15,7 @@ const Favorite = () => {
           aperiam blanditiis deserunt provident?
         </p>
       </div>
-
-      <div className="Favorite__background"></div>
+      <img src={HotelImg} className="Favorite__background" alt="hotel"/>
     </div>
   );
 };

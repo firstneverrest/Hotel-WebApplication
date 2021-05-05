@@ -11,14 +11,26 @@
   &__nav {
     display: flex;
     flex-direction: column;
+    position: relative;
     
-    & li:first-of-type {
+    & a {
+      text-decoration: none;
+      text-transform: uppercase;
+      color: $color-black;
+    }
+    
+    & li {
       display: flex;
       align-items: center;
       list-style-type: none;
-      text-decoration: none;
       padding: 2rem 3rem;
+      cursor: pointer;
       transition: all 0.3s ease-out;
+
+
+      & p {
+        margin-left: 2.5rem;
+      }
 
       &:hover {
         background-color: $color-gray;
@@ -28,6 +40,12 @@
 
     &-icon {
       margin-right: 1rem;
+      position: absolute;
+    }
+
+    &-active li {
+      color: $color-white;
+      background-color: $color-black;
     }
   }
 
@@ -37,6 +55,7 @@
     margin-bottom: $margin-medium !important;
     margin-top: 3rem;
     margin-left: 3rem;
+    color: $color-black;
   }
 
   &-home {
@@ -65,9 +84,4 @@
       padding: 0 1.5rem;
     }
   }
-}
-
-.active {
-  background-color: $color-black;
-  color: $color-white;
 }

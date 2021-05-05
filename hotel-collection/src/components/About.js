@@ -1,5 +1,7 @@
 import React from "react";
 
+import HotelImg from '../img/img-hotel-3.jpg'
+
 const About = () => {
   return (
     <div className="About-container">
@@ -15,7 +17,7 @@ const About = () => {
         </p>
       </div>
 
-      <div className="About__background"></div>
+      <img src={HotelImg} className="About__background" alt="hotel"/>
     </div>
   );
 };

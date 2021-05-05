@@ -1,79 +1,54 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 
 import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
-import { AiFillHome, AiFillCompass, AiFillHeart, AiFillInfoCircle, AiFillContacts } from "react-icons/ai";
-import { RiContactsBook2Fill } from 'react-icons/ri'
-import { Link } from "react-router-dom";
+import {
+  AiFillHome,
+  AiFillCompass,
+  AiFillHeart,
+  AiFillInfoCircle,
+  AiFillContacts,
+} from "react-icons/ai";
+
+import { NavLink } from "react-router-dom";
 
 const Sidebar = () => {
-  const [ClickedPage, setClickedPage] = useState("home");
-
-  const navStyle = {
-    textDecoration: "none",
-    listStyleType: "none",
-    color: "#000",
-  };
-
   return (
     <div className="Sidebar">
       <div className="container">
-        <h3 className="Sidebar-logo">
-          <Link to="/" style={navStyle}>
-            Neverrest
-          </Link>
-        </h3>
+        <NavLink to="/home" style={{ textDecoration: "none" }}>
+          <h3 className="Sidebar-logo">Neverrest</h3>
+        </NavLink>
         <ul className="Sidebar__nav">
-          <Link to="/" style={navStyle}>
-            <li
-              className={`Sidebar-home ${ClickedPage === "home" && "active"}`}
-              onClick={() => setClickedPage("home")}
-            >
+          <NavLink to="/home" activeClassName="Sidebar__nav-active">
+            <li>
               <AiFillHome className="Sidebar__nav-icon" />
-              HOME
+              <p>Home</p>
             </li>
-          </Link>
-          <Link to="/explore" style={navStyle}>
-            <li
-              className={`Sidebar-explore ${
-                ClickedPage === "explore" && "active"
-              }`}
-              onClick={() => setClickedPage("explore")}
-            >
-              <AiFillCompass className="Sidebar__nav-icon" /> 
-              EXPLORE
+          </NavLink>
+          <NavLink to="/explore" activeClassName="Sidebar__nav-active">
+            <li>
+              <AiFillCompass className="Sidebar__nav-icon" />
+              <p>Explore</p>
             </li>
-          </Link>
-          <Link to="/favorite" style={navStyle}>
-            <li
-              className={`Sidebar-favorite ${
-                ClickedPage === "favorite" && "active"
-              }`}
-              onClick={() => setClickedPage("favorite")}
-            >
+          </NavLink>
+          <NavLink to="/favorite" activeClassName="Sidebar__nav-active">
+            <li>
               <AiFillHeart className="Sidebar__nav-icon" />
-              FAVORITE
+              <p>Favorite</p>
             </li>
-          </Link>
-          <Link to="/about" style={navStyle}>
-            <li
-              className={`Sidebar-about ${ClickedPage === "about" && "active"}`}
-              onClick={() => setClickedPage("about")}
-            >
+          </NavLink>
+          <NavLink to="/contact" activeClassName="Sidebar__nav-active">
+            <li>
               <AiFillInfoCircle className="Sidebar__nav-icon" />
-              ABOUT
+              <p>Contact</p>
             </li>
-          </Link>
-          <Link to="/contact" style={navStyle}>
-            <li
-              className={`Sidebar-contact ${
-                ClickedPage === "contact" && "active"
-              }`}
-              onClick={() => setClickedPage("contact")}
-            >
-              <RiContactsBook2Fill className="Sidebar__nav-icon" />
-              CONTACT
+          </NavLink>
+          <NavLink to="/about" activeClassName="Sidebar__nav-active">
+            <li>
+              <AiFillContacts className="Sidebar__nav-icon" />
+              <p>About</p>
             </li>
-          </Link>
+          </NavLink>
         </ul>
       </div>
 
